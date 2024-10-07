@@ -5,8 +5,8 @@ function Resume() {
   return (
     <section id="resume" className="p-8 mt-12 min-h-screen bg-gradient-to-br from-gray-200 to-gray-400 flex flex-col items-center">
       <div className="text-center mb-6">
-        <h2 className="text-5xl font-extrabold bg-clip-text text-blue-600">
-          Curriculum
+        <h2 className="text-4xl font-extrabold text-center mb-8 text-blue-600">
+        Resume
         </h2>
         <p className="mt-2 text-lg text-gray-700">Download the resume below</p>
       </div>

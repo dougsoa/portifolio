@@ -4,7 +4,7 @@ import profileImage from '../images/profile.png';
 function About() {
     return (
         <section id="about" className="min-h-screen  bg-gradient-to-br from-gray-200 to-gray-400 p-10 flex flex-col items-center p-8 mt-12"> {/* Added mt-16 for spacing */}
-            <h2 className="text-5xl font-extrabold text-center mb-8 text-blue-600">About Me</h2>
+            <h2 className="text-4xl font-extrabold text-center mb-8 text-blue-600">About</h2>
 
             <div className="flex flex-col items-center mb-8">
                 {/* Profile Image */}

@@ -46,7 +46,7 @@ function Home() {
           onClick={generateQuote}
           className="bg-blue-600 text-white py-3 px-10 rounded-full text-lg hover:bg-blue-700"
         >
-          CHANGE
+          knowledge
         </button>
         {quote && <p className="mt-6 text-lg text-gray-800 italic">{quote}</p>}
       </div>
