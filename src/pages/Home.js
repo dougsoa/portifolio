@@ -38,7 +38,9 @@ function Home() {
       className="min-h-screen bg-gradient-to-br from-gray-200 to-gray-400 p-10 flex items-center justify-center text-center"
     >
       <div className="max-w-xl">
-        <h1 className="text-4xl font-extrabold mb-8">HEY, I'M DOUGLAS OLIVEIRA</h1>
+        <h1 className="text-5xl font-extrabold mb-8" style={{ fontFamily: 'concert one, sans-serif' }}>
+          HEY, I'M DOUGLAS OLIVEIRA
+        </h1>
         <p className="text-lg text-gray-700 mb-8">
           A results-oriented Animal Scientist and Web Developer who analyzes, builds, and manages websites and web applications
         </p>
