@@ -16,7 +16,7 @@ const projects = [
   },
   {
     id: 3,
-    imageUrl: 'https://private-user-images.githubusercontent.com/83471539/374279794-e3e4ed1b-68a0-4250-9492-f4808a1a3ac7.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjgzMjQzOTksIm5iZiI6MTcyODMyNDA5OSwicGF0aCI6Ii84MzQ3MTUzOS8zNzQyNzk3OTQtZTNlNGVkMWItNjhhMC00MjUwLTk0OTItZjQ4MDhhMWEzYWM3LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEwMDclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMDA3VDE4MDEzOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTk3YzJhNjZjMWE1ZjZjZjNjMDYxMjQxOTZlMDBkODU5NjZlM2E2N2M1MTg1ZDQ1NTk0MTVhNTQ5ZWJjMGRlY2MmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.MRaW4GmZnCXpySeX26P1pfrb5GgZ_BSusQqnsRyJNSM',
+    imageUrl: 'https://private-user-images.githubusercontent.com/83471539/374338291-dc10a733-1932-46ba-afe8-413f4f1738a2.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjgzMzc4MTgsIm5iZiI6MTcyODMzNzUxOCwicGF0aCI6Ii84MzQ3MTUzOS8zNzQzMzgyOTEtZGMxMGE3MzMtMTkzMi00NmJhLWFmZTgtNDEzZjRmMTczOGEyLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEwMDclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMDA3VDIxNDUxOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTgxYjkyZWI4NDI4YzhlYjc0OWIwYTQxOTAyYzI4Y2RiYzM3NzQyZTNhM2FmMmEwNDNhM2E1NzcwMjVjZGQyOTkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.cwqYNCQ55o4pLXI8Va8X1WDcuDZXK86JJcVIXopRePU',
     title: 'SearchZonaNorte🔍',
     description: 'Page for searching places in the North Zone of Porto Alegre',
   },
@@ -54,9 +54,10 @@ const Portfolio = () => {
             whileHover={{ scale: 1.05 }} // Zoom effect on hover
           >
             <div
-              className="h-48 bg-cover bg-center transition-transform duration-300"
+              className="h-64 w-full bg-cover bg-center transition-transform duration-300"
               style={{
-                backgroundImage: `url(${project.imageUrl})`, 
+                backgroundImage: `url(${project.imageUrl})`,
+                objectFit: 'cover', // Ensures the image covers the entire div without distortion
               }}
             ></div>
             <div className="p-6">
