@@ -12,7 +12,7 @@ const projects = [
     id: 1,
     imageUrl: FelipeFisioterapia,
     title: '@FelipevieiraFisioterapia🩺',
-    description: "This project was made to facilitate the client's contact with the office owner, who works alone and schedules appointments using WhatsApp.",
+    description: "This project simplifies client contact with the office owner, who manages appointments via WhatsApp.",
   },
   {
     id: 2,

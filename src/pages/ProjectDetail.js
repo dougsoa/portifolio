@@ -80,58 +80,61 @@ const ProjectDetail = () => {
         return <div className="p-8 text-center">Project not found</div>;
     }
 
-    return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-200 to-gray-400 p-5 md:p-10 flex flex-col items-center mt-12">
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-blue-600">{project.title}</h2>
+return (
+  <div className="min-h-screen bg-gradient-to-br from-gray-200 to-gray-400 p-5 md:p-10 flex flex-col items-center mt-16 md:mt-12">
+    <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-blue-600">{project.title}</h2>
 
-            <div className="mb-6">
-                <p className="text-lg text-gray-700">{project.description}</p>
-                <h3 className="text-xl md:text-2xl font-bold mt-4 mb-2">Technology Stack:</h3>
+    <div className="mb-6">
+      <p className="text-lg text-gray-700">{project.description}</p>
+      <h3 className="text-xl md:text-2xl font-bold mt-4 mb-2">Technology Stack:</h3>
 
-                {/* Modified Flex Display for Stacks */}
-                <div className="flex flex-wrap mb-6">
-                    {project.stack.map((tech, index) => (
-                        <div key={index} className="flex items-center mb-2 mr-4">
-                            <div className="flex items-center">
-                                {tech.icon}
-                                <span className="ml-2 text-gray-600">{tech.name}</span>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
-                <a
-                    href={project.demoLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block mt-4 px-4 py-2 md:px-6 md:py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition duration-300"
-                >
-                    View Demo
-                </a>
+      {/* Modified Flex Display for Stacks */}
+      <div className="flex flex-wrap mb-6">
+        {project.stack.map((tech, index) => (
+          <div key={index} className="flex items-center mb-2 mr-4">
+            <div className="flex items-center">
+              {tech.icon}
+              <span className="ml-2 text-gray-600">{tech.name}</span>
             </div>
+          </div>
+        ))}
+      </div>
 
-            {/* Images Section with Stories */}
-            {project.images.map((imageUrl, index) => (
-                <div key={index} className="flex flex-col md:flex-row items-start mb-8 w-full max-w-5xl">
-                    <img
-                        src={imageUrl}
-                        alt={`Project screenshot ${index + 1}`}
-                        className="w-full md:w-1/2 h-auto object-cover rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105 mb-4 md:mb-0"
-                        style={{ maxHeight: '400px' }} // Define uma altura máxima para garantir que a imagem não fique muito grande
-                    />
-                    <div className="md:ml-6">
-                        <p className="text-md md:text-lg text-gray-700">
-                            {project.stories[index]}
-                        </p>
-                    </div>
-                </div>
-            ))}
+      <a
+        href={project.demoLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block mt-4 px-4 py-2 md:px-6 md:py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition duration-300"
+      >
+        View Demo
+      </a>
+    </div>
 
-            <Link to="/portfolio" className="mt-4 text-blue-600 underline hover:text-blue-800 transition duration-300">
-                Back to Portfolio
-            </Link>
+    {/* Images Section with Stories */}
+    {project.images.map((imageUrl, index) => (
+      <div key={index} className="flex flex-col md:flex-row items-start mb-8 w-full max-w-5xl">
+        <img
+          src={imageUrl}
+          alt={`Project screenshot ${index + 1}`}
+          className="w-full md:w-1/2 h-auto object-cover rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105 mb-4 md:mb-0"
+          style={{
+            maxHeight: '400px', // Define uma altura máxima para que a imagem fique controlada
+            objectPosition: 'center center', // Ajuste o foco da imagem no centro
+          }}
+        />
+        <div className="md:ml-6">
+          <p className="text-md md:text-lg text-gray-700">
+            {project.stories[index]}
+          </p>
         </div>
-    );
+      </div>
+    ))}
+
+    <Link to="/portfolio" className="mt-4 text-blue-600 underline hover:text-blue-800 transition duration-300">
+      Back to Portfolio
+    </Link>
+  </div>
+);
 };
 
 export default ProjectDetail;
