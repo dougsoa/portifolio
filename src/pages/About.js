@@ -75,44 +75,44 @@ function About() {
                     </div>
                 </div>
                 <div className="bg-white shadow-xl rounded-lg p-6 transition-transform transform hover:scale-105">
-    <h3 className="text-3xl font-semibold text-blue-600 mb-4">Languages</h3>
-    
-    {/* Language Proficiency Meter */}
-    <div className="space-y-4">
-        {/* Portuguese */}
-        <div className="relative group">
-            <span className="font-semibold">Portuguese</span>
-            <div className="w-full bg-gray-300 rounded h-4 mt-1">
-                <div className="bg-green-500 h-full rounded" style={{ width: '100%' }}></div> {/* Nativo e fluente */}
-            </div>
-            <div className="absolute left-0 top-full mt-1 hidden group-hover:block bg-gray-800 text-white text-sm rounded p-1">
-                Native and Fluent
-            </div>
-        </div>
+                    <h3 className="text-3xl font-semibold text-blue-600 mb-4">Languages</h3>
 
-        {/* Spanish */}
-        <div className="relative group">
-            <span className="font-semibold">Spanish</span>
-            <div className="w-full bg-gray-300 rounded h-4 mt-1">
-                <div className="bg-green-500 h-full rounded" style={{ width: '75%' }}></div> {/* Fluente */}
-            </div>
-            <div className="absolute left-0 top-full mt-1 hidden group-hover:block bg-gray-800 text-white text-sm rounded p-1">
-                Fluent
-            </div>
-        </div>
+                    {/* Language Proficiency Meter */}
+                    <div className="space-y-4">
+                        {/* Portuguese */}
+                        <div className="relative group">
+                            <span className="font-semibold">Portuguese</span>
+                            <div className="w-full bg-gray-300 rounded h-4 mt-1">
+                                <div className="bg-green-500 h-full rounded" style={{ width: '100%' }}></div> {/* Nativo e fluente */}
+                            </div>
+                            <div className="absolute left-0 top-full mt-1 hidden group-hover:block bg-gray-800 text-white text-sm rounded p-1">
+                                Native and Fluent
+                            </div>
+                        </div>
 
-        {/* English */}
-        <div className="relative group">
-            <span className="font-semibold">English</span>
-            <div className="w-full bg-gray-300 rounded h-4 mt-1">
-                <div className="bg-yellow-500 h-full rounded" style={{ width: '50%' }}></div> {/* Intermediário */}
-            </div>
-            <div className="absolute left-0 top-full mt-1 hidden group-hover:block bg-gray-800 text-white text-sm rounded p-1">
-                Intermediate
-            </div>
-        </div>
-    </div>
-</div>
+                        {/* Spanish */}
+                        <div className="relative group">
+                            <span className="font-semibold">Spanish</span>
+                            <div className="w-full bg-gray-300 rounded h-4 mt-1">
+                                <div className="bg-green-500 h-full rounded" style={{ width: '75%' }}></div> {/* Fluente */}
+                            </div>
+                            <div className="absolute left-0 top-full mt-1 hidden group-hover:block bg-gray-800 text-white text-sm rounded p-1">
+                                Fluent
+                            </div>
+                        </div>
+
+                        {/* English */}
+                        <div className="relative group">
+                            <span className="font-semibold">English</span>
+                            <div className="w-full bg-gray-300 rounded h-4 mt-1">
+                                <div className="bg-yellow-500 h-full rounded" style={{ width: '50%' }}></div> {/* Intermediário */}
+                            </div>
+                            <div className="absolute left-0 top-full mt-1 hidden group-hover:block bg-gray-800 text-white text-sm rounded p-1">
+                                Intermediate
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
             </div>

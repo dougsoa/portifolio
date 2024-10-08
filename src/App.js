@@ -6,6 +6,7 @@ import About from './pages/About';
 import Portfolio from './pages/Portfolio';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact';
+import ProjectDetail from './pages/ProjectDetail'; // Importando o componente ProjectDetail
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/project/:id" element={<ProjectDetail />} /> {/* Rota para detalhes do projeto */}
         </Routes>
       </div>
     </Router>

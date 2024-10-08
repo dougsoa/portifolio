@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 // Importando as imagens localmente
 import FelipeFisioterapia from '../images/felipe-fisioterapia.png';
@@ -48,31 +49,32 @@ const Portfolio = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
-          <motion.div
-            key={project.id}
-            className="bg-white rounded-lg shadow-lg transition-transform transform hover:shadow-xl hover:-translate-y-2 duration-300 overflow-hidden"
-            initial="hidden"
-            animate="visible"
-            variants={cardVariants}
-            transition={{ delay: index * 0.1, duration: 0.5 }}
-            whileHover={{ scale: 1.05 }}
-          >
-            <div
-              className="h-64 w-full bg-cover bg-center transition-transform duration-300"
-              style={{
-                backgroundImage: `url(${project.imageUrl})`,
-                objectFit: 'cover',
-              }}
-            ></div>
-            <div className="p-6">
-              <h3 className="text-2xl font-bold mb-2 transition-colors duration-300 hover:text-blue-600">
-                {project.title}
-              </h3>
-              <p className="text-gray-600 transition-opacity duration-300 hover:opacity-70">
-                {project.description}
-              </p>
-            </div>
-          </motion.div>
+          <Link to={`/project/${project.id}`} key={project.id}>
+            <motion.div
+              className="bg-white rounded-lg shadow-lg transition-transform transform hover:shadow-xl hover:-translate-y-2 duration-300 overflow-hidden"
+              initial="hidden"
+              animate="visible"
+              variants={cardVariants}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <div
+                className="h-64 w-full bg-cover bg-center transition-transform duration-300"
+                style={{
+                  backgroundImage: `url(${project.imageUrl})`,
+                  objectFit: 'cover',
+                }}
+              ></div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold mb-2 transition-colors duration-300 hover:text-blue-600">
+                  {project.title}
+                </h3>
+                <p className="text-gray-600 transition-opacity duration-300 hover:opacity-70">
+                  {project.description}
+                </p>
+              </div>
+            </motion.div>
+          </Link>
         ))}
       </div>
     </section>
