@@ -40,12 +40,6 @@ const Portfolio = () => {
       className="p-8 mt-12 bg-gradient-to-br from-gray-200 to-gray-400 min-h-screen"
     >
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-extrabold text-center mb-8 text-blue-600">
-          Projects
-        </h2>
-        <p className="text-lg text-gray-700">
-          Explore some of the projects I've worked on.
-        </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (

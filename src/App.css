@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+/* src/styles.css */
+
+.mobile-view section {
+  padding: 20px;
+  border-bottom: 1px solid #ddd; /* Adicionando uma linha entre seções */
+}
+
+.mobile-view section:last-child {
+  border-bottom: none; /* Remove a linha do último item */
+}
+
+/* src/styles.css */
+/* Adicione ao seu CSS global */
+.mobile-view {
+  overflow-y: auto; /* Permitir rolagem */
+  scroll-behavior: smooth; /* Rolagem suave */
+}
+
+
+h1, h2, p {
+  margin-bottom: 16px; /* Espaço entre os elementos de texto */
+}
+
+button {
+  transition: transform 0.3s ease; /* Animação suave ao passar o mouse sobre os botões */
+}
+
+/* Adicione no seu CSS global ou no arquivo de estilos */
+.section {
+  padding: 20px; /* Adicione algum espaço para cada seção */
+}
