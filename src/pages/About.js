@@ -8,6 +8,7 @@ import foto2 from '../images/foto2.jpg';
 import foto3 from '../images/foto3.jpg';
 import foto4 from '../images/foto4.jpg';
 import foto5 from '../images/foto5.jpg';
+import foto6 from '../images/foto6.jpg';
 
 function About() {
     const [selectedImage, setSelectedImage] = useState(null);
@@ -48,7 +49,7 @@ function About() {
 
                 {/* Modal para imagem em tamanho original */}
                 {selectedImage && (
-                    <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center" onClick={closeModal}>
+                    <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50" onClick={closeModal}>
                         <img src={selectedImage} alt="Selected" className="max-w-full max-h-full object-contain" />
                     </div>
                 )}
@@ -132,19 +133,20 @@ function About() {
                     <h3 className="text-3xl font-semibold text-blue-600 mb-4">Languages</h3>
                     <div className="space-y-4">
                         {[
-                            { language: 'Portuguese', level: '100%' },
-                            { language: 'Spanish', level: '75%' },
-                            { language: 'English', level: '90%' },
-                        ].map(({ language, level }) => (
+                            { language: 'Portuguese', level: '100%', color: 'bg-green-500' },
+                            { language: 'Spanish', level: '90%', color: 'bg-orange-500' },
+                            { language: 'English', level: '75%', color: 'bg-blue-500' },
+                        ].map(({ language, level, color }) => (
                             <div className="relative group" key={language}>
                                 <span className="font-semibold">{language}</span>
                                 <div className="w-full bg-gray-300 rounded h-4 mt-1">
-                                    <div className="bg-green-500 h-full rounded" style={{ width: level }}></div>
+                                    <div className={`${color} h-full rounded`} style={{ width: level }}></div>
                                 </div>
                             </div>
                         ))}
                     </div>
                 </div>
+
 
                 {/* Adicionando a Galeria de Fotos */}
                 <div className="bg-white shadow-xl rounded-lg p-6 transition-transform transform hover:scale-105">
@@ -180,9 +182,14 @@ function About() {
                             className="w-full h-56 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer"
                             onClick={() => handleImageClick(foto5)}
                         />
+                        <img
+                            src={foto6}
+                            alt="Gallery 6"
+                            className="w-full h-56 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer"
+                            onClick={() => handleImageClick(foto6)}
+                        />
                     </div>
                 </div>
-
             </div>
         </section>
     );
