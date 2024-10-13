@@ -8,6 +8,7 @@ import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import ProjectDetail from './pages/ProjectDetail'; // Importando o componente ProjectDetail
 
+
 function App() {
   return (
     <Router>

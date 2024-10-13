@@ -1,9 +1,25 @@
-import React from 'react';
-import { FaPython, FaHtml5, FaCss3Alt, FaReact, FaMicrosoft, FaRunning, FaFutbol, FaDumbbell, FaSwimmer, FaBook, FaFish, FaBicycle } from 'react-icons/fa'; // Adicionando o FaBicycle
+import React, { useState } from 'react';
+import { FaPython, FaHtml5, FaCss3Alt, FaReact, FaMicrosoft, FaRunning, FaFutbol, FaDumbbell, FaSwimmer, FaBook, FaFish, FaBicycle } from 'react-icons/fa';
 import { SiPowerbi, SiPowerapps, SiPowerautomate } from 'react-icons/si';
 import profileImage from '../images/profile.png';
+// Importando as imagens da galeria
+import foto1 from '../images/foto1.jpg';
+import foto2 from '../images/foto2.jpg';
+import foto3 from '../images/foto3.jpg';
+import foto4 from '../images/foto4.jpg';
+import foto5 from '../images/foto5.jpg';
 
 function About() {
+    const [selectedImage, setSelectedImage] = useState(null);
+
+    const handleImageClick = (image) => {
+        setSelectedImage(image);
+    };
+
+    const closeModal = () => {
+        setSelectedImage(null);
+    };
+
     return (
         <section id="about" className="min-h-screen bg-gradient-to-br from-gray-200 to-gray-400 p-10 flex flex-col items-center p-8 mt-12">
             {/* Remover imagem e nome em mobile */}
@@ -23,12 +39,56 @@ function About() {
                 <div className="bg-white shadow-xl rounded-lg p-6 transition-transform transform hover:scale-105">
                     <h3 className="text-3xl font-semibold text-blue-600 mb-4">Life Story</h3>
                     <p className="text-gray-700 leading-relaxed">
-                    Front-end Developer and Animal Scientist with expertise in React.js and Python. 
-                    I have a strong background in process automation, BI report development, and experience with Power Automate and Power Apps. 
-                    Passionate about building AI-powered tools, I am also well-versed in managing projects using Agile methodologies. 
-                    I hold a postgraduate degree in Coding & Tech Journey from FIAP, a bachelor's degree in Systems Analysis and Development from UNINTER, and a Bachelor of Science in Animal Science from UFRGS.
+                        Front-end Developer and Animal Scientist with expertise in React.js and Python.
+                        I have a strong background in process automation, BI report development, and experience with Power Automate and Power Apps.
+                        Passionate about building AI-powered tools, I am also well-versed in managing projects using Agile methodologies.
+                        I hold a postgraduate degree in Coding & Tech Journey from FIAP, a bachelor's degree in Systems Analysis and Development from UNINTER, and a Bachelor of Science in Animal Science from UFRGS.
                     </p>
                 </div>
+
+                {/* Adicionando a Galeria de Fotos */}
+                <div className="bg-white shadow-xl rounded-lg p-6 transition-transform transform hover:scale-105">
+                    <h3 className="text-3xl font-semibold text-blue-600 mb-4">Photo Gallery</h3>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                        <img
+                            src={foto1}
+                            alt="Gallery 1"
+                            className="w-full h-56 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer"
+                            onClick={() => handleImageClick(foto1)}
+                        />
+                        <img
+                            src={foto2}
+                            alt="Gallery 2"
+                            className="w-full h-56 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer"
+                            onClick={() => handleImageClick(foto2)}
+                        />
+                        <img
+                            src={foto3}
+                            alt="Gallery 3"
+                            className="w-full h-56 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer"
+                            onClick={() => handleImageClick(foto3)}
+                        />
+                        <img
+                            src={foto4}
+                            alt="Gallery 4"
+                            className="w-full h-56 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer"
+                            onClick={() => handleImageClick(foto4)}
+                        />
+                        <img
+                            src={foto5}
+                            alt="Gallery 5"
+                            className="w-full h-56 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer"
+                            onClick={() => handleImageClick(foto5)}
+                        />
+                    </div>
+                </div>
+
+                {/* Modal para imagem em tamanho original */}
+                {selectedImage && (
+                    <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center" onClick={closeModal}>
+                        <img src={selectedImage} alt="Selected" className="max-w-full max-h-full object-contain" />
+                    </div>
+                )}
 
                 {/* Technologies and Skills Section */}
                 <div className="bg-white shadow-xl rounded-lg p-6 transition-transform transform hover:scale-105">
@@ -108,27 +168,20 @@ function About() {
                 <div className="bg-white shadow-xl rounded-lg p-6 transition-transform transform hover:scale-105">
                     <h3 className="text-3xl font-semibold text-blue-600 mb-4">Languages</h3>
                     <div className="space-y-4">
-                        <div className="relative group">
-                            <span className="font-semibold">Portuguese</span>
-                            <div className="w-full bg-gray-300 rounded h-4 mt-1">
-                                <div className="bg-green-500 h-full rounded" style={{ width: '100%' }}></div>
+                        {[
+                            { language: 'Portuguese', level: '100%' },
+                            { language: 'Spanish', level: '75%' },
+                            { language: 'English', level: '90%' },
+                        ].map(({ language, level }) => (
+                            <div className="relative group" key={language}>
+                                <span className="font-semibold">{language}</span>
+                                <div className="w-full bg-gray-300 rounded h-4 mt-1">
+                                    <div className="bg-green-500 h-full rounded" style={{ width: level }}></div>
+                                </div>
                             </div>
-                        </div>
-                        <div className="relative group">
-                            <span className="font-semibold">Spanish</span>
-                            <div className="w-full bg-gray-300 rounded h-4 mt-1">
-                                <div className="bg-green-500 h-full rounded" style={{ width: '75%' }}></div>
-                            </div>
-                        </div>
-                        <div className="relative group">
-                            <span className="font-semibold">English</span>
-                            <div className="w-full bg-gray-300 rounded h-4 mt-1">
-                                <div className="bg-yellow-500 h-full rounded" style={{ width: '50%' }}></div>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
-
             </div>
         </section>
     );
