@@ -46,43 +46,6 @@ function About() {
                     </p>
                 </div>
 
-                {/* Adicionando a Galeria de Fotos */}
-                <div className="bg-white shadow-xl rounded-lg p-6 transition-transform transform hover:scale-105">
-                    <h3 className="text-3xl font-semibold text-blue-600 mb-4">Photo Gallery</h3>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                        <img
-                            src={foto1}
-                            alt="Gallery 1"
-                            className="w-full h-56 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer"
-                            onClick={() => handleImageClick(foto1)}
-                        />
-                        <img
-                            src={foto2}
-                            alt="Gallery 2"
-                            className="w-full h-56 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer"
-                            onClick={() => handleImageClick(foto2)}
-                        />
-                        <img
-                            src={foto3}
-                            alt="Gallery 3"
-                            className="w-full h-56 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer"
-                            onClick={() => handleImageClick(foto3)}
-                        />
-                        <img
-                            src={foto4}
-                            alt="Gallery 4"
-                            className="w-full h-56 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer"
-                            onClick={() => handleImageClick(foto4)}
-                        />
-                        <img
-                            src={foto5}
-                            alt="Gallery 5"
-                            className="w-full h-56 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer"
-                            onClick={() => handleImageClick(foto5)}
-                        />
-                    </div>
-                </div>
-
                 {/* Modal para imagem em tamanho original */}
                 {selectedImage && (
                     <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center" onClick={closeModal}>
@@ -182,6 +145,44 @@ function About() {
                         ))}
                     </div>
                 </div>
+
+                {/* Adicionando a Galeria de Fotos */}
+                <div className="bg-white shadow-xl rounded-lg p-6 transition-transform transform hover:scale-105">
+                    <h3 className="text-3xl font-semibold text-blue-600 mb-4">Photo Gallery</h3>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                        <img
+                            src={foto1}
+                            alt="Gallery 1"
+                            className="w-full h-56 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer"
+                            onClick={() => handleImageClick(foto1)}
+                        />
+                        <img
+                            src={foto2}
+                            alt="Gallery 2"
+                            className="w-full h-56 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer"
+                            onClick={() => handleImageClick(foto2)}
+                        />
+                        <img
+                            src={foto3}
+                            alt="Gallery 3"
+                            className="w-full h-56 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer"
+                            onClick={() => handleImageClick(foto3)}
+                        />
+                        <img
+                            src={foto4}
+                            alt="Gallery 4"
+                            className="w-full h-56 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer"
+                            onClick={() => handleImageClick(foto4)}
+                        />
+                        <img
+                            src={foto5}
+                            alt="Gallery 5"
+                            className="w-full h-56 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer"
+                            onClick={() => handleImageClick(foto5)}
+                        />
+                    </div>
+                </div>
+
             </div>
         </section>
     );
