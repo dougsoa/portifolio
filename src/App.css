@@ -1,75 +1,70 @@
-/* app.css */
-
-/* Global styles for layout */
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow-x: hidden; /* Evita rolagem horizontal */
-}
-
 .App {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Garante que a altura mínima ocupe 100% da tela */
-}
-
-.App-main {
-  flex: 1; /* Faz o conteúdo principal ocupar o espaço restante */
-  overflow-y: auto; /* Permite rolagem vertical no conteúdo principal */
-}
-
-.App-footer {
-  background-color: #282c34;
-  color: white;
   text-align: center;
-  padding: 1rem;
 }
 
-/* Estilos específicos para o About */
-.about-container {
-  background-color: #f9f9f9;
-  padding: 20px;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-.section {
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
-}
-
-.section-content {
-  display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-.section-content .text {
-  flex: 1;
-  max-width: 45%;
-  margin: 0 10px;
+.App-link {
+  color: #61dafb;
 }
 
-.section-content .icon {
-  font-size: 4rem; /* Ajuste o tamanho do ícone conforme necessário */
-  color: #333;
-  margin: 0 10px;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-@media (max-width: 768px) {
-  .section-content {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .section-content .text {
-    max-width: 100%;
-    margin: 0;
-  }
-  
-  .section-content .icon {
-    font-size: 3rem;
-    max-width: 100%;
-  }
+/* src/styles.css */
+
+.mobile-view section {
+  padding: 20px;
+  border-bottom: 1px solid #ddd; /* Adicionando uma linha entre seções */
+}
+
+.mobile-view section:last-child {
+  border-bottom: none; /* Remove a linha do último item */
+}
+
+/* src/styles.css */
+/* Adicione ao seu CSS global */
+.mobile-view {
+  overflow-y: auto; /* Permitir rolagem */
+  scroll-behavior: smooth; /* Rolagem suave */
+}
+
+
+h1, h2, p {
+  margin-bottom: 16px; /* Espaço entre os elementos de texto */
+}
+
+button {
+  transition: transform 0.3s ease; /* Animação suave ao passar o mouse sobre os botões */
+}
+
+/* Adicione no seu CSS global ou no arquivo de estilos */
+.section {
+  padding: 20px; /* Adicione algum espaço para cada seção */
 }

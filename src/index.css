@@ -1,16 +1,17 @@
-/* index.css */
-@import url('https://fonts.googleapis.com/css2?family=YourFontName:wght@400;700&display=swap');
-
 body {
   margin: 0;
-  font-family: 'YourFontName', sans-serif; /* Certifique-se de usar a fonte correta */
-  overflow-x: auto; /* Adiciona isso para garantir que não haja rolagem horizontal */
-  overflow-y: auto; /* Adiciona isso para garantir que não haja rolagem vertical desnecessária */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Utilizando Tailwind CSS */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Adicione seu estilo personalizado aqui */

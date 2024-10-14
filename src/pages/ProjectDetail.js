@@ -35,7 +35,7 @@ const projectData = {
             { name: 'Node.js', icon: <FaNodeJs className="text-green-600" /> },
             { name: 'Firebase', icon: <FaFire className="text-orange-600" /> }, // Updated icon
         ],
-        demoLink: 'https://dougsoa.github.io/brewandbeans/',
+        demoLink: 'https://brewandbeans.vercel.app/home',
         images: [
             'https://raw.githubusercontent.com/dougsoa/brewandbeans/main/src/assets/home.png',
             'https://raw.githubusercontent.com/dougsoa/brewandbeans/main/src/assets/contact.png',

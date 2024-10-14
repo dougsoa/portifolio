@@ -1,30 +1,28 @@
-import React, { useState, useEffect } from 'react';
-import { onAuthStateChanged } from 'firebase/auth';
-import { auth } from './firebaseConfig';
-import AppRoutes from './routes'; // Se você estiver usando um arquivo separado para as rotas
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar'; // Navbar desktop
+import Home from './pages/Home';
+import About from './pages/About';
+import Portfolio from './pages/Portfolio';
+import Contact from './pages/Contact';
+import ProjectDetail from './pages/ProjectDetail'; // Importando o componente ProjectDetail
+
 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setIsAuthenticated(true);
-      } else {
-        setIsAuthenticated(false);
-      }
-    });
-
-    // Limpar o ouvinte quando o componente desmontar
-    return () => unsubscribe();
-  }, []);
-
   return (
-    <div id="root">
-      <div className="main-content">
-        <AppRoutes isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />
+    <Router>
+      <div className="App">
+        <Navbar /> {/* Mantendo apenas o Navbar desktop */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/project/:id" element={<ProjectDetail />} />
+        </Routes>
       </div>
-    </div>
+    </Router>
   );
 }
 
